@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #aaa;
+}
+
+.hero, .content {
+  padding: 6rem 10%;
+  text-align: center;
+}
+
+.email-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.email-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  background: #111;
+  font-size: 0.9rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* make footer stick to bottom on short pages */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body > * {
+  flex-shrink: 0;
+}
+
+footer {
+  margin-top: auto;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-section {
+  text-align: center;
+}
+
+.services-section ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+.content.services-section {
+  padding: 3rem 10%; /* reduced vertical space */
+  margin: 0; /* remove extra margins */
+}
+
+.services-section + .services-section {
+  margin-top: 1rem; /* small space between sections */
+}
+
+.services-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-section li {
+  text-align: center;
+  margin: 0.3rem 0;
+}
+
+.hero-img {
+  display: block;
+  max-width: 1000px;       /* controls size */
+  width: 100%;
+  height: 75%;
+  margin: 1.5rem auto 0;  /* center horizontally and add top spacing */
+  border-radius: 8px;     /* optional: rounded corners */
+  border: 2px solid #fff; /* subtle white border for contrast */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* soft glow effect */
+}
+
+.slideshow {
+  position: relative;
+  width: 1000px;           /* fixed width */
+  height: 500px;          /* fixed height */
+  margin: 1.5rem auto 0;  /* center horizontally */
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills container without distortion */
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.about-section {
+  display: flex;
+  align-items: center;     /* vertically aligns text and image */
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 10%;
+  flex-wrap: wrap;         /* wraps on small screens */
+}
+
+.about-text {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.about-img {
+  width: 350px;            /* fixed width */
+  height: 450px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  background: #111;
+  font-size: 0.9rem;
+}
+
+footer a.linkedin-link {
+  color: #0e76a8;        /* LinkedIn blue */
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+footer a.linkedin-link:hover {
+  color: #fff;           /* hover white */
+  text-decoration: underline;
+}
+
